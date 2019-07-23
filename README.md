@@ -31,7 +31,7 @@ The current kernel tarball may be downloaded from the link below (or via `wget`,
 
 Variant | Version | Most Recent Image
 :--- | ---: | ---:
-Kernel, dtbs, modules and GIC stub | 4.19.57.20190709 | [bcm2711-kernel-4.19.57.20190709.tar.xz](https://github.com/sakaki-/bcm2711-kernel/releases/download/4.19.57.20190709/bcm2711-kernel-4.19.57.20190709.tar.xz)
+Kernel, dtbs, modules and GIC stub | 4.19.59.20190723 | [bcm2711-kernel-4.19.59.20190723.tar.xz](https://github.com/sakaki-/bcm2711-kernel/releases/download/4.19.59.20190723/bcm2711-kernel-4.19.59.20190723.tar.xz)
 
 The corresponding kernel configuration (derived via `make bcm2711_defconfig`) may be viewed [here](https://github.com/sakaki-/bcm2711-kernel/blob/master/config).
 
@@ -41,8 +41,8 @@ The corresponding kernel configuration (derived via `make bcm2711_defconfig`) ma
 
 To deploy (assuming that your RPi4's micro SD-card's first partition is mounted as `/boot`, and you are already running a 32-bit or 64-bit RPi4-capable image, simply download, untar into the root directory, and reboot:
 ```console
-pi64 ~ # wget -c https://github.com/sakaki-/bcm2711-kernel/releases/download/4.19.57.20190709/bcm2711-kernel-4.19.57.20190709.tar.xz
-pi64 ~ # tar -xJf bcm27111-kernel-4.19.57.20190709.tar.xz -C /
+pi64 ~ # wget -c https://github.com/sakaki-/bcm2711-kernel/releases/download/4.19.59.20190723/bcm2711-kernel-4.19.59.20190723.tar.xz
+pi64 ~ # tar -xJf bcm27111-kernel-4.19.59.20190723.tar.xz -C /
 pi64 ~ # sync && reboot
 ```
 
