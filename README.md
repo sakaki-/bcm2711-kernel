@@ -5,7 +5,7 @@ Automated build of the latest 64-bit `bcm2711_defconfig` Linux kernel for the Ra
 
 <img src="https://raw.githubusercontent.com/sakaki-/resources/master/raspberrypi/pi4/Raspberry_Pi_4_B.jpg" alt="Raspberry Pi 4 B" width="250px" align="right"/>
 
-This project contains a weekly autobuild of the default branch (currently, `rpi-4.19.y`) of the [official Raspberry Pi Linux source tree](https://github.com/raspberrypi/linux), for the [64-bit Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)).
+This project contains a weekly autobuild of the default branch (currently, `rpi-4.19.y`) of the [official Raspberry Pi Linux source tree](https://github.com/raspberrypi/linux), for the [64-bit Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/).
 
 Builds are performed with the standard `bcm2711_defconfig`, with the only change being that the first 12 hex digits of the tip commit SHA1 hash are appended to `CONFIG_LOCALVERSION` (with a separating hyphen) before building.
 
