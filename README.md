@@ -20,7 +20,7 @@ A new build tarball is automatically created and uploaded as a release asset eac
 As an (historical) example, on 23 July 2019, the default branch was `rpi-4.19.y` and the latest commit was `a21b98653ecf7b2f71906228d9965d8174a1c275` (the short form of which is `a21b98653ecf`). The created release was [4.19.59.20190723](https://github.com/sakaki-/bcm2711-kernel/releases/tag/4.19.59.20190723), within which the kernel tarball was `bcm2711-kernel-4.19.59.20190723.tar.xz`, and the corresponding kernel release name was `4.19.59-v8-a21b98653ecf-p4+`.
 
 Each kernel release tarball currently provides the following files:
-* `/boot/kernel8p4.img` (this is the bootable 64-bit kernel);
+* `/boot/kernel8-p4.img` (this is the bootable 64-bit kernel);
 * `/boot/COPYING.linux` (the kernel's license file);
 * `/boot/config-p4` (the configuration used to build the kernel);
 * `/boot/System-p4.map` (the kernel's symbol table);
@@ -65,7 +65,7 @@ arm_64bit=1
 enable_gic=1
 armstub=armstub8-gic.bin
 # differentiate from Pi3 64-bit kernels
-kernel="kernel8p4.img"
+kernel="kernel8-p4.img"
 ```
 
 > NB: these prebuilt kernels and ebuilds are provided as a convenience only. Use at your own risk! **Given that the releases in this project are created automatically, there is no guarantee that any given kernel will boot correctly.** A 64-bit kernel is necessary, but not sufficient, to boot the RPi4 in 64-bit mode; you also need the supporting firmware, configuration files, and userland software.
