@@ -9,7 +9,7 @@ Automated build of the latest 64-bit `bcm2711_defconfig` Linux kernel for the Ra
 
 This project contains a weekly autobuild of the default branch (currently, `rpi-4.19.y`) of the [official Raspberry Pi Linux source tree](https://github.com/raspberrypi/linux), for the [64-bit Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/).
 
-Builds are performed with the standard `bcm2711_defconfig`, with the only change being that the first 12 hex digits of the tip commit SHA1 hash are appended to `CONFIG_LOCALVERSION` (with a separating hyphen) before building.
+Builds are performed with the standard `bcm2711_defconfig`, with the only change being that the first 12 hex digits of the tip commit SHA1 hash plus `-p4` are appended to `CONFIG_LOCALVERSION` (with a separating hyphen) before building.
 
 > Please note that as the purpose of this project is to provide a 'vanilla' build of the upstream `bcm2711_defconfig`, PRs requesting config changes will be rejected. Instead, please see the sister [`bcm2711-kernel-bis`](https://github.com/sakaki-/bcm2711-kernel-bis) project, which has a weekly autobuild (with versions mirroring this one, using a tweaked `bcm2711_defconfig`), and where such PRs *will* be accepted for review.
 
@@ -17,13 +17,13 @@ A new build tarball is automatically created and uploaded as a release asset eac
 
 > The default branch is used, as that is generally given most attention by RPF upstream.
 
-As an (historical) example, on 23 July 2019, the default branch was `rpi-4.19.y` and the latest commit was `a21b98653ecf7b2f71906228d9965d8174a1c275` (the short form of which is `a21b98653ecf`). The created release was [4.19.59.20190723](https://github.com/sakaki-/bcm2711-kernel/releases/tag/4.19.59.20190723), within which the kernel tarball was `bcm2711-kernel-4.19.59.20190723.tar.xz`, and the corresponding kernel release name was `4.19.59-v8-a21b98653ecf+`.
+As an (historical) example, on 23 July 2019, the default branch was `rpi-4.19.y` and the latest commit was `a21b98653ecf7b2f71906228d9965d8174a1c275` (the short form of which is `a21b98653ecf`). The created release was [4.19.59.20190723](https://github.com/sakaki-/bcm2711-kernel/releases/tag/4.19.59.20190723), within which the kernel tarball was `bcm2711-kernel-4.19.59.20190723.tar.xz`, and the corresponding kernel release name was `4.19.59-v8-a21b98653ecf-p4+`.
 
 Each kernel release tarball currently provides the following files:
 * `/boot/kernel8p4.img` (this is the bootable 64-bit kernel);
 * `/boot/COPYING.linux` (the kernel's license file);
-* `/boot/config` (the configuration used to build the kernel);
-* `/boot/System.map` (the kernel's symbol table);
+* `/boot/config-p4` (the configuration used to build the kernel);
+* `/boot/System-p4.map` (the kernel's symbol table);
 * `/boot/bcm2711-rpi-4-b.dtb` (the device tree blob; currently only one);
 * `/boot/armstub8-gic.bin` (stubs required for the GIC);
 * `/boot/overlays/...` (the device tree blob overlays);
