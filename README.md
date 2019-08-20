@@ -94,6 +94,6 @@ linuxpc ~ # umount -v /mnt/piroot/{boot,}
 
 If you now remove the microSD card, insert it into a RPi4, and power on, you should find it starts up under the 64-bit kernel! 
 
-> Users of my [rpi3 overlay](https://github.com/sakaki-/rpi3-overlay) (it is pre-installed on the [gentoo-on-rpi3-64bit](https://github.com/sakaki-/gentoo-on-rpi3-64bit) image, for example), can simply `emerge` the `bcm2711-kernel-bin` package to deploy (a new ebuild is automatically created to mirror each release here).
+> Users of my [genpi64 overlay](https://github.com/sakaki-/genpi64-overlay) (it is pre-installed on the [gentoo-on-rpi-64bit](https://github.com/sakaki-/gentoo-on-rpi-64bit) image, for example), can simply `emerge` the `bcm2711-kernel-bin` package to deploy (a new ebuild is automatically created to mirror each release here).
 
 > NB: these prebuilt kernels and ebuilds are provided as a convenience only. Use at your own risk! **Given that the releases in this project are created automatically, there is no guarantee that any given kernel will boot correctly.** A 64-bit kernel is necessary, but not sufficient, to boot the RPi4 in 64-bit mode; you also need the supporting firmware, configuration files, and userland software.
