@@ -36,7 +36,7 @@ The current kernel tarball may be downloaded from the link below (or via `wget`,
 
 Variant | Version | Most Recent Image
 :--- | ---: | ---:
-Kernel, dtbs, modules and GIC stub | 5.4.44.20200607 | [bcm2711-kernel-5.4.44.20200607.tar.xz](https://github.com/sakaki-/bcm2711-kernel/releases/download/5.4.44.20200607/bcm2711-kernel-5.4.44.20200607.tar.xz)
+Kernel, dtbs, modules and GIC stub | 5.4.44.20200609 | [bcm2711-kernel-5.4.44.20200609.tar.xz](https://github.com/sakaki-/bcm2711-kernel/releases/download/5.4.44.20200609/bcm2711-kernel-5.4.44.20200609.tar.xz)
 
 The corresponding kernel configuration (derived via `make bcm2711_defconfig`) may be viewed [here](https://github.com/sakaki-/bcm2711-kernel/blob/master/config).
 
@@ -65,7 +65,7 @@ linuxpc ~ # mount -v /dev/mmcblk0p1 /mnt/piroot/boot
 Next, fetch the the current kernel tarball, and untar it into the mounted image. Issue:
 
 ```console
-linuxpc ~ # wget -cO- https://github.com/sakaki-/bcm2711-kernel/releases/download/5.4.44.20200607/bcm2711-kernel-5.4.44.20200607.tar.xz | tar -xJf- -C /mnt/piroot/
+linuxpc ~ # wget -cO- https://github.com/sakaki-/bcm2711-kernel/releases/download/5.4.44.20200609/bcm2711-kernel-5.4.44.20200609.tar.xz | tar -xJf- -C /mnt/piroot/
 ```
 
 Then, edit the image's `/boot/config.txt`:
